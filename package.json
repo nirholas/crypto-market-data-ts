@@ -1,5 +1,5 @@
 {
-  "name": "@nicholasrq/crypto-market-data",
+  "name": "@nirholas/crypto-market-data",
   "version": "1.0.0",
   "description": "Comprehensive cryptocurrency market data service with CoinGecko, DeFiLlama, and Fear & Greed Index integration. Built-in caching, rate limiting, and Edge Runtime compatibility.",
   "keywords": [

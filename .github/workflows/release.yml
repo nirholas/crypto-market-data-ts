@@ -51,7 +51,7 @@ jobs:
             ## 📦 Installation
             
             ```bash
-            npm install @nicholasrq/crypto-market-data@${{ github.ref_name }}
+            npm install @nirholas/crypto-market-data@${{ github.ref_name }}
             ```
             
             ## 📝 Changelog

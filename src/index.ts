@@ -1,5 +1,5 @@
 /**
- * @nicholasrq/crypto-market-data
+ * @nirholas/crypto-market-data
  * 
  * Comprehensive cryptocurrency market data service with CoinGecko, 
  * DeFiLlama, and Fear & Greed Index integration.
@@ -11,7 +11,7 @@
  * - Full TypeScript support
  * - Zero dependencies
  * 
- * @module @nicholasrq/crypto-market-data
+ * @module @nirholas/crypto-market-data
  * @author nirholas
  * @license MIT
  */
@@ -455,7 +455,7 @@ export class MarketDataError extends Error {
  * 
  * @example
  * ```typescript
- * import { MarketDataClient } from '@nicholasrq/crypto-market-data';
+ * import { MarketDataClient } from '@nirholas/crypto-market-data';
  * 
  * const client = new MarketDataClient();
  * 
@@ -1418,7 +1418,7 @@ export function getFearGreedBgColor(value: number): string {
  * 
  * @example
  * ```typescript
- * import { marketData } from '@nicholasrq/crypto-market-data';
+ * import { marketData } from '@nirholas/crypto-market-data';
  * 
  * const coins = await marketData.getTopCoins(10);
  * ```

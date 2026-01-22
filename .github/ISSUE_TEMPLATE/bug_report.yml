@@ -23,7 +23,7 @@ body:
       label: Steps to Reproduce
       description: How can we reproduce this issue?
       placeholder: |
-        1. Install package with `npm install @nicholasrq/crypto-market-data`
+        1. Install package with `npm install @nirholas/crypto-market-data`
         2. Call `client.getTopCoins()`
         3. See error...
     validations:
@@ -45,7 +45,7 @@ body:
       description: If applicable, provide a minimal code sample that reproduces the issue.
       render: typescript
       placeholder: |
-        import { MarketDataClient } from '@nicholasrq/crypto-market-data';
+        import { MarketDataClient } from '@nirholas/crypto-market-data';
         
         const client = new MarketDataClient();
         const coins = await client.getTopCoins();

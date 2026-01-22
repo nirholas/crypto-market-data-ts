@@ -1,6 +1,5 @@
-# @nicholasrq/crypto-market-data
 
-[![npm version](https://badge.fury.io/js/%40nicholasrq%2Fcrypto-market-data.svg)](https://www.npmjs.com/package/@nicholasrq/crypto-market-data)
+[![npm version](https://badge.fury.io/js/%40nirholas%2Fcrypto-market-data.svg)](https://www.npmjs.com/package/@nirholas/crypto-market-data)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)
 
@@ -19,17 +18,17 @@ Comprehensive cryptocurrency market data service with built-in caching, rate lim
 ## Installation
 
 ```bash
-npm install @nicholasrq/crypto-market-data
+npm install @nirholas/crypto-market-data
 # or
-yarn add @nicholasrq/crypto-market-data
+yarn add @nirholas/crypto-market-data
 # or
-pnpm add @nicholasrq/crypto-market-data
+pnpm add @nirholas/crypto-market-data
 ```
 
 ## Quick Start
 
 ```typescript
-import { MarketDataClient } from '@nicholasrq/crypto-market-data';
+import { MarketDataClient } from '@nirholas/crypto-market-data';
 
 const client = new MarketDataClient();
 
@@ -51,7 +50,7 @@ coins.forEach(coin => {
 ### Initialization
 
 ```typescript
-import { MarketDataClient, type MarketDataConfig } from '@nicholasrq/crypto-market-data';
+import { MarketDataClient, type MarketDataConfig } from '@nirholas/crypto-market-data';
 
 const config: MarketDataConfig = {
   rateLimitWindow: 60000,      // Rate limit window in ms (default: 60000)
@@ -143,7 +142,7 @@ import {
   formatPercent,
   getFearGreedColor,
   getFearGreedBgColor 
-} from '@nicholasrq/crypto-market-data';
+} from '@nirholas/crypto-market-data';
 
 formatPrice(45123.45);     // "$45,123"
 formatPrice(0.00001234);   // "$0.0000"
@@ -162,7 +161,7 @@ getFearGreedBgColor(50);   // "bg-yellow-500" (Neutral)
 For backwards compatibility, all methods are also exported as standalone functions:
 
 ```typescript
-import { getTopCoins, getMarketOverview } from '@nicholasrq/crypto-market-data';
+import { getTopCoins, getMarketOverview } from '@nirholas/crypto-market-data';
 
 const coins = await getTopCoins(10);
 const overview = await getMarketOverview();
@@ -279,7 +278,7 @@ export default {
 ## Error Handling
 
 ```typescript
-import { MarketDataError } from '@nicholasrq/crypto-market-data';
+import { MarketDataError } from '@nirholas/crypto-market-data';
 
 try {
   const coin = await client.getCoinDetails('invalid-coin-id');
@@ -319,7 +318,7 @@ import type {
   GlobalDeFi,
   DerivativeTicker,
   MarketDataConfig,
-} from '@nicholasrq/crypto-market-data';
+} from '@nirholas/crypto-market-data';
 ```
 
 ## License
