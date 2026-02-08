@@ -2,7 +2,7 @@
 [![npm version](https://badge.fury.io/js/%40nirholas%2Fcrypto-market-data.svg)](https://www.npmjs.com/package/@nirholas/crypto-market-data)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)
-
+ 
 Comprehensive cryptocurrency market data service with built-in caching, rate limiting, and Edge Runtime compatibility.
 
 ## Features
