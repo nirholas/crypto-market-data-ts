@@ -541,3 +541,82 @@ artificial general intelligence agent, AGI agent, narrow AI agent, weak AI agent
 *Last Updated: January 29, 2026*
 </details>
 
+
+---
+
+## 🌐 Live HTTP Deployment
+
+**Crypto Market Data (TypeScript)** is deployed and accessible over HTTP via [MCP Streamable HTTP](https://modelcontextprotocol.io/specification/2025-03-26/basic/transports#streamable-http) transport — no local installation required.
+
+**Endpoint:**
+```
+https://modelcontextprotocol.name/mcp/crypto-market-data-ts
+```
+
+### Connect from any MCP Client
+
+Add to your MCP client configuration (Claude Desktop, Cursor, SperaxOS, etc.):
+
+```json
+{
+  "mcpServers": {
+    "crypto-market-data-ts": {
+      "type": "http",
+      "url": "https://modelcontextprotocol.name/mcp/crypto-market-data-ts"
+    }
+  }
+}
+```
+
+### Available Tools (10)
+
+| Tool | Description |
+|------|-------------|
+| `get_price` | Get current crypto prices |
+| `get_market_overview` | Top cryptos by market cap |
+| `get_trending` | Trending cryptocurrencies |
+| `search_coins` | Search coins |
+| `get_coin_detail` | Detailed coin info |
+| `get_global_stats` | Global market stats |
+| `get_defi_protocols` | Top DeFi protocols by TVL |
+| `get_protocol_detail` | Protocol TVL breakdown |
+| `get_chain_tvl` | TVL by blockchain |
+| `get_fear_greed_index` | Crypto Fear & Greed Index |
+
+### Example Requests
+
+**Get current crypto prices:**
+```bash
+curl -X POST https://modelcontextprotocol.name/mcp/crypto-market-data-ts \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"get_price","arguments":{"ids":"bitcoin","vs_currencies":"usd"}}}'
+```
+
+**Top cryptos by market cap:**
+```bash
+curl -X POST https://modelcontextprotocol.name/mcp/crypto-market-data-ts \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"get_market_overview","arguments":{"limit":5}}}'
+```
+
+**Trending cryptocurrencies:**
+```bash
+curl -X POST https://modelcontextprotocol.name/mcp/crypto-market-data-ts \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"get_trending","arguments":{}}}'
+```
+
+### List All Tools
+
+```bash
+curl -X POST https://modelcontextprotocol.name/mcp/crypto-market-data-ts \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'
+```
+
+### Also Available On
+
+- **[SperaxOS](https://speraxos.vercel.app)** — Browse and install from the [MCP marketplace](https://speraxos.vercel.app/community/mcp)
+- **All 27 MCP servers** — See the full catalog at [modelcontextprotocol.name](https://modelcontextprotocol.name)
+
+> Powered by [modelcontextprotocol.name](https://modelcontextprotocol.name) — the open MCP HTTP gateway
