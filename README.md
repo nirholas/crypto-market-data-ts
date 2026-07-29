@@ -1,3 +1,5 @@
+# @nirholas/crypto-market-data
+
 
 [![npm version](https://badge.fury.io/js/%40nirholas%2Fcrypto-market-data.svg)](https://www.npmjs.com/package/@nirholas/crypto-market-data)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)

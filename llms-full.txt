@@ -10,7 +10,7 @@ crypto-market-data-ts is an open-source project by nirholas. Comprehensive crypt
 
 - URL: https://github.com/nirholas/crypto-market-data-ts
 - Language: TypeScript
-- License: MIT
+- License: Proprietary — all rights reserved (see LICENSE)
 - Author: nirholas
 
 ## Contributing
