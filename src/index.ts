@@ -708,7 +708,7 @@ export class MarketDataClient {
         throw new MarketDataError('Failed to fetch trending', response.status);
       }
 
-      const data = await response.json();
+      const data = (await response.json()) as { coins: { item: TrendingCoin }[] };
       const trending = data.coins.map((c: { item: TrendingCoin }) => c.item);
       this.setCache(cacheKey, trending, CACHE_TTL.global);
       return trending;
@@ -732,7 +732,7 @@ export class MarketDataClient {
         throw new MarketDataError('Failed to fetch global data', response.status);
       }
 
-      const data = await response.json();
+      const data = (await response.json()) as { data: GlobalMarketData };
       this.setCache(cacheKey, data.data, CACHE_TTL.global);
       return data.data;
     } catch {
@@ -758,7 +758,7 @@ export class MarketDataClient {
         throw new MarketDataError('Failed to fetch coin details', response.status);
       }
 
-      const data = await response.json();
+      const data = (await response.json()) as Record<string, unknown>;
       this.setCache(cacheKey, data, CACHE_TTL.global);
       return data;
     } catch {
@@ -785,7 +785,7 @@ export class MarketDataClient {
         throw new MarketDataError('Failed to fetch fear & greed index', response.status);
       }
 
-      const data = await response.json();
+      const data = (await response.json()) as { data?: FearGreedIndex[] };
       const fng = data.data?.[0];
       if (fng) {
         this.setCache(cacheKey, fng, CACHE_TTL.global);
@@ -816,7 +816,7 @@ export class MarketDataClient {
         throw new MarketDataError('Failed to fetch protocols', response.status);
       }
 
-      const data = await response.json();
+      const data = (await response.json()) as ProtocolTVL[];
       const top = data
         .filter((p: ProtocolTVL) => p.tvl > 0)
         .sort((a: ProtocolTVL, b: ProtocolTVL) => b.tvl - a.tvl)
@@ -845,7 +845,7 @@ export class MarketDataClient {
         throw new MarketDataError('Failed to fetch chains', response.status);
       }
 
-      const data = await response.json();
+      const data = (await response.json()) as ChainTVL[];
       const top = data
         .sort((a: ChainTVL, b: ChainTVL) => (b.tvl || 0) - (a.tvl || 0))
         .slice(0, limit);
@@ -950,7 +950,7 @@ export class MarketDataClient {
         throw new MarketDataError('Failed to fetch OHLC data', response.status);
       }
 
-      const rawData: [number, number, number, number, number][] = await response.json();
+      const rawData = (await response.json()) as [number, number, number, number, number][];
       const ohlcData: OHLCData[] = rawData.map(([timestamp, open, high, low, close]) => ({
         timestamp,
         open,
@@ -986,7 +986,7 @@ export class MarketDataClient {
         throw new MarketDataError('Failed to fetch historical price', response.status);
       }
 
-      const data: HistoricalSnapshot = await response.json();
+      const data = (await response.json()) as HistoricalSnapshot;
       this.setCache(cacheKey, data, CACHE_TTL.static);
       return data;
     } catch {
@@ -1053,7 +1053,7 @@ export class MarketDataClient {
         throw new MarketDataError('Failed to fetch exchange details', response.status);
       }
 
-      const data: ExchangeDetails = await response.json();
+      const data = (await response.json()) as ExchangeDetails;
       this.setCache(cacheKey, data, CACHE_TTL.tickers);
       return data;
     } catch {
@@ -1147,7 +1147,7 @@ export class MarketDataClient {
         throw new MarketDataError('Failed to compare coins', response.status);
       }
 
-      const rawData = await response.json();
+      const rawData = (await response.json()) as Record<string, unknown>[];
       const coins: CompareCoin[] = rawData.map((coin: Record<string, unknown>) => ({
         id: coin.id as string,
         symbol: coin.symbol as string,
@@ -1218,7 +1218,7 @@ export class MarketDataClient {
         throw new MarketDataError('Failed to fetch developer data', response.status);
       }
 
-      const data = await response.json();
+      const data = (await response.json()) as { developer_data?: DeveloperData };
       const developerData: DeveloperData = data.developer_data || {
         forks: 0,
         stars: 0,
@@ -1258,7 +1258,7 @@ export class MarketDataClient {
         throw new MarketDataError('Failed to fetch community data', response.status);
       }
 
-      const data = await response.json();
+      const data = (await response.json()) as { community_data?: CommunityData };
       const communityData: CommunityData = data.community_data || {
         twitter_followers: null,
         reddit_subscribers: null,
@@ -1296,7 +1296,7 @@ export class MarketDataClient {
         throw new MarketDataError('Failed to fetch global DeFi data', response.status);
       }
 
-      const { data }: { data: GlobalDeFi } = await response.json();
+      const { data } = (await response.json()) as { data: GlobalDeFi };
       this.setCache(cacheKey, data, CACHE_TTL.global);
       return data;
     } catch {

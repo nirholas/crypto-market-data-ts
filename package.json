@@ -1,6 +1,6 @@
 {
   "name": "@nirholas/crypto-market-data",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Comprehensive cryptocurrency market data service with CoinGecko, DeFiLlama, and Fear & Greed Index integration. Built-in caching, rate limiting, and Edge Runtime compatibility.",
   "keywords": [
     "crypto",
@@ -21,11 +21,11 @@
   "license": "SEE LICENSE IN LICENSE",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nirholas/crypto-market-data.git"
+    "url": "git+https://github.com/nirholas/crypto-market-data-ts.git"
   },
-  "homepage": "https://github.com/nirholas/crypto-market-data#readme",
+  "homepage": "https://github.com/nirholas/crypto-market-data-ts#readme",
   "bugs": {
-    "url": "https://github.com/nirholas/crypto-market-data/issues"
+    "url": "https://github.com/nirholas/crypto-market-data-ts/issues"
   },
   "type": "module",
   "main": "./dist/index.cjs",
@@ -69,5 +69,8 @@
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "overrides": {
+    "esbuild": "^0.28.1"
   }
 }
