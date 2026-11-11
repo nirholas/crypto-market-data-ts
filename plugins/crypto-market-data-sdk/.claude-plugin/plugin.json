@@ -1,0 +1,18 @@
+{
+  "name": "crypto-market-data-sdk",
+  "version": "1.0.1",
+  "description": "TypeScript SDK for CoinGecko, DeFiLlama and Fear and Greed market data with caching and rate limiting.",
+  "author": {
+    "name": "nirholas"
+  },
+  "repository": "https://github.com/nirholas/crypto-market-data-ts",
+  "homepage": "https://github.com/nirholas/crypto-market-data-ts",
+  "keywords": [
+    "crypto",
+    "market-data",
+    "coingecko",
+    "defillama",
+    "fear-greed-index",
+    "typescript"
+  ]
+}
